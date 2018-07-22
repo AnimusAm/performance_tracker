@@ -1,14 +1,18 @@
 package hr.smilebacksmile.performance.logging;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import hr.smilebacksmile.performance.logging.annotations.LoggablePerformance;
 
 public class Test {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(Test.class);
 
     public static void main(String [] args) {
-        LOGGER.trace("test");
+
+        printBlaBla();
+    }
+
+    @LoggablePerformance(logger = "MethodPerformanceLogger")
+    public static void printBlaBla() {
+        System.out.println("blabla");
     }
 }

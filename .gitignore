@@ -2,8 +2,8 @@
 *.[oa]
 
 # ignore target directory
-target/
+target/*
 
 # ignore all idea specific libraries
-.idea/libraries/
+.idea/*
 
